@@ -1,6 +1,7 @@
 package classdemo;
 
 import java.util.Scanner;
+//给定二叉树的前序遍历，建立二叉树并且返回中序遍历
 
 public class BuildTree {
     static class TreeNode{
