@@ -12,6 +12,7 @@ public class Heap {
      * @param index 表示从index位置的下标开始调整
      */
     public static void shiftDown(int[] array,int size,int index){
+        //建小堆的向下调整
         int parent=index;
         //先假设child是左孩子节点
         int child=parent*2+1;
@@ -35,15 +36,42 @@ public class Heap {
             child=parent*2+1;
         }
     }
-    public static void creatHeap(int[] array,int size){
+    public static void shiftDown1(int[] array,int size,int index){
+        //建大堆的向下调整
+        int parent =index;
+        int child=(parent*2)+1;
+        while(child<size){
+            //选取较大值
+            if(child+1<size&&array[child+1]>array[child]){
+                child=child+1;
+            }
+            if(array[parent]<array[child]){
+                int temp=array[child];
+                array[child]=array[parent];
+                array[parent]=temp;
+            }else{
+                break;
+            }
+            //更新条件
+            parent=child;
+            child=parent*2+1;
+        }
+    }
+    public static void creatHeap1(int[] array,int size){
         for(int i=(size-1-1)/2;i>=0;i--){
             shiftDown(array,size,i);
         }
     }
-
+    public static void creatHeap2(int[] array,int size){
+        for(int i=(size-1-1)/2;i>=0;i--){
+            shiftDown1(array,size,i);
+        }
+    }
     public static void main(String[] args) {
         int[] array={9,5,2,7,3,6,8};
-        creatHeap(array,array.length);
-        System.out.println(Arrays.toString(array));
+        creatHeap1(array,array.length);
+        System.out.println("向下调整"+Arrays.toString(array));
+        creatHeap2(array,array.length);
+        System.out.println("向上调整"+Arrays.toString(array));
     }
 }
