@@ -7,6 +7,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+ //二叉树的后序遍历(迭代)
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> res=new ArrayList<>();
@@ -26,6 +27,7 @@ class Solution {
             }
             TreeNode top=stack.peek();
             if(top.right==null||top.right==prev){
+                //右子树为空或者右子树访问过了
                 res.add(top.val);
                 stack.pop();
                 prev=top;
