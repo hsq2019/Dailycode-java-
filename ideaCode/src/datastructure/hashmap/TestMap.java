@@ -3,6 +3,7 @@ package datastructure.hashmap;
 import datastructure.hashtab.HashTabDemo;
 //map 键值队，key和value，key和value是映射关系
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class TestMap {
@@ -32,6 +33,12 @@ public class TestMap {
         //6 按照key-value的映射关系打印
         for(Map.Entry<Integer,String> entry:map.entrySet()){
             System.out.println(entry.getKey()+"="+entry.getValue());
+        }
+
+        //使用迭代器打印
+        Iterator<Map.Entry<Integer, String>> iterator= map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
         }
     }
 }
