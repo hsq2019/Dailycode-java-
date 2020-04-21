@@ -15,9 +15,11 @@ public class MyHashMap {
             this.value = value;
         }
     }
+    //负载因子
+    private static final double LOAD_FACTOR=0.75;
     //新建一个node类型数组
     //array就是hashMap的本体，数组的每个元素都是链表的头节点
-    Node[] array=new Node[101];
+    private Node[] array=new Node[101];
     private int size=0;
 
     //哈希函数
@@ -43,6 +45,23 @@ public class MyHashMap {
         newNode.next=list;
         array[index]=newNode;
         size++;
+        if(size/array.length>LOAD_FACTOR){
+            //进行扩容
+            resize();
+        }
+    }
+    //进行扩容
+    private void resize() {
+        Node[] newArray=new Node[array.length*2];
+        for(int i=0;i<array.length;i++){
+            for(Node cur=array[i];cur!=null;cur=cur.next){
+                int index=cur.key%newArray.length;
+                Node newNode=new Node(cur.key,cur.value);
+                newNode.next=newArray[index];
+                newArray[index]=newNode;
+            }
+
+        }
     }
 
     //get方法 查找
@@ -65,10 +84,11 @@ public class MyHashMap {
             System.out.println("删除失败");
             return;
         }
-        //头删的情况
+        //头删的情况,出现在头
         if(list.key==key){
-            list= list.next;
+            list=list.next;
             System.out.println("删除成功");
+            size--;
             return;
         }
         Node cur=list.next;
@@ -97,10 +117,14 @@ public class MyHashMap {
         map.put(3,30);
         map.put(4,40);
         map.put(1,50);
-        System.out.println(map.get(5));
-        System.out.println(map.get(1));
+//        System.out.println(map.get(5));
+//        System.out.println(map.get(1));
+//        System.out.println(map.get(2));
+//        map.remove(2);
+//        System.out.println(map.get(2));
+        map.remove(5);
+        map.remove(2);
         System.out.println(map.get(2));
-
 
 
     }
