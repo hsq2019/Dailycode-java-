@@ -1,6 +1,8 @@
 package datastructure.tree.threadedBinaryTree;
 
 
+import com.sun.corba.se.impl.resolver.SplitLocalResolverImpl;
+
 //线索化二叉树
 //在原先二叉树的基础上增加了线索话的功能
 public class ThreadedBinaryTreeDemo {
@@ -27,6 +29,8 @@ public class ThreadedBinaryTreeDemo {
         HeroNode rightNode=node5.getRight();
         System.out.println("10号节点的前驱节点是"+leftNode);
         System.out.println("10号节点的后继节点是"+rightNode);
+        //遍历
+        threadedBinaryTree.threadedList();
 
     }
     
@@ -52,7 +56,7 @@ class ThreadedBinaryTree{
         //终须遍历线索化
         //1,先线索化左子树
         threadedNodes(node.getLeft());
-        //2，线索化当前酒店
+        //2，线索化当前节点
         if(node.getLeft()==null){
             node.setLeft(prev);
             node.setLeftType(1);
@@ -66,6 +70,25 @@ class ThreadedBinaryTree{
 
         //3.线索化右子树
         threadedNodes(node.getRight());
+    }
+    //遍历线索化二叉树(中序)
+    public void threadedList(){
+        HeroNode cur=root;
+        //先找到被线索化的一个节点(标记)
+        while (cur!=null){
+            while (cur.getLeftType()==0){
+                cur=cur.getLeft();
+            }
+            //打印当前节点
+            System.out.println(cur);
+            //如果右边也被标记，说明当前节点是没有右子树
+            while (cur.getRightType()==1){
+                cur=cur.getRight();
+                System.out.println(cur);
+            }
+            //有右子树的情况
+            cur=cur.getRight();
+        }
     }
 
     //前序遍历
