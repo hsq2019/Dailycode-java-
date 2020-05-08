@@ -108,8 +108,6 @@ class DoubleLinkedList{
             System.out.println("没找到删除的节点！");
         }
     }
-    //
-
 }
 
 class HeroNode {
@@ -133,5 +131,5 @@ class HeroNode {
                 ", name='" + name + '\'' +
                 ", nickname='" + nickname + '\'' +
                 '}';
-    }
+    } 
 }
