@@ -1,5 +1,4 @@
 package datastructure.stack;
-
 import jdk.nashorn.internal.ir.RuntimeNode;
 import java.util.*;
 public class ArrayStackDemo {
@@ -97,6 +96,4 @@ class ArrayStack{
         }
         System.out.println();
     }
-
-
 }
