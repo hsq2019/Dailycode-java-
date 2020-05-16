@@ -8,7 +8,6 @@ public class InsertSort {
     public static void main(String[] args) {
         int[] arr={17,3,25,14,20,9};
         insertSort(arr);
-
     }
     public static void insertSort(int[] arr){
         int insertVal=0;//要插入的数
