@@ -5,6 +5,8 @@ import library.book.BookList;
 
 import java.util.Scanner;
 
+//普通用户
+
 public class NormalUser extends User {
     public NormalUser(String name){
         this.name=name;
