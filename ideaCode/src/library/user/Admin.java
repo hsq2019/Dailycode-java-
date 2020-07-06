@@ -4,6 +4,7 @@ import library.action.*;
 
 import java.util.Scanner;
 
+//管理员
 public class Admin extends User {
     public Admin(String name){
         this.name=name;
