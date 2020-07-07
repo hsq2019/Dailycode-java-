@@ -2,6 +2,7 @@ package datastructure.sort;
 
 import java.util.Arrays;
 
+
 //归并排序
 public class MergeSort {
     public static void main(String[] args) {
@@ -62,8 +63,6 @@ public class MergeSort {
             t++;
             tempLeft++;
         }
-
-
     }
 
 }
