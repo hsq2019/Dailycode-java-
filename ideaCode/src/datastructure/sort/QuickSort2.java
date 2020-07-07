@@ -2,6 +2,7 @@ package datastructure.sort;
 
 import java.util.Arrays;
 
+
 //快速排序
 public class QuickSort2 {
     public static void main(String[] args) {
