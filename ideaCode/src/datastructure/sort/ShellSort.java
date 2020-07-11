@@ -14,7 +14,6 @@ public class ShellSort {
         shellSort2(arr2);
 
     }
-
     //对有序序列进行插入时使用的是交换法
     //效率相对较低
     public  static void shellSort1(int[] arr){
