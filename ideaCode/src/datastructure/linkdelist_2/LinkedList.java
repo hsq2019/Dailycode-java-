@@ -4,7 +4,6 @@ public class LinkedList {
     //管理所有链表节点
     private Node head=null;//空链表
 
-
     //头插入
     public void addFirst(int data){
         //空链表
