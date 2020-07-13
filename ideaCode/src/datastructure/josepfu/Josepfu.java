@@ -1,6 +1,7 @@
 package datastructure.josepfu;
 
 public class Josepfu {
+
     public static void main(String[] args) {
         //测试
         CircleSingleLinkedList circleSingleLinkedList=new CircleSingleLinkedList();
