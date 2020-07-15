@@ -91,9 +91,6 @@ class SingleLinkedList{
             temp.next=heroNode;
         }
     }
-
-
-
 }
 
 //定义一个HeroNode，每个HeroNode对象都是一个节点
