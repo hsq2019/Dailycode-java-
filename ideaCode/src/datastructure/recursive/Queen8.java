@@ -19,7 +19,6 @@ public class Queen8 {
         }
         System.out.println();
     }
-
     //放置第n个皇后
     private void check(int n){
         if(n==max){
