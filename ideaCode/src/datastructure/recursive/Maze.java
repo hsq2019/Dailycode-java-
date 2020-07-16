@@ -34,10 +34,6 @@ public class Maze {
             }
             System.out.println();
         }
-
-
-
-
     }
     //使用递归给小球找路
     //i，j表示从地图的哪个地图开始出发。（1，1）
