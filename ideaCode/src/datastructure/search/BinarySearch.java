@@ -15,7 +15,6 @@ public class BinarySearch {
         }else{
             System.out.println("找到了，下标是"+res);
         }
-
     }
     public static int binarySearch(int[] arr,int value,int right,int left){
         if(right<left){
