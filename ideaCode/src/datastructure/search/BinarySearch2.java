@@ -16,9 +16,6 @@ public class BinarySearch2 {
         int right=arr.length-1;
         List<Integer> reaList=binarySearch2(arr,value,left,right);
         System.out.println(reaList);
-
-
-
     }
     public static List binarySearch2(int[] arr,int value,int left,int right){
         //如果找不到，返回一个空的ArrayList
