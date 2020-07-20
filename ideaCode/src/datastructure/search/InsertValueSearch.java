@@ -7,8 +7,6 @@ import java.util.Scanner;
 //插值查找
 
 //数组是有序的
-
-
 public class InsertValueSearch {
     public static void main(String[] args) {
 //        int[] arr=new int[100];
