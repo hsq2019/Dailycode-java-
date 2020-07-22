@@ -27,5 +27,4 @@ public class SeqSearch {
         }
         return -1;
     }
-
 }
