@@ -1,5 +1,7 @@
 package datastructure;
 import java.util.*;
+
+
 public class ArrayQueueDemo {
     public static void main(String[] args) {
     ArrayQueue arrayQueue=new ArrayQueue(3);
@@ -101,7 +103,6 @@ class ArrayQueue {
             System.out.print(arr[i] + " ");
         }
     }
-
     //查看队列头的数据
     public int headQueue() {
         if (isEmpty()) {
