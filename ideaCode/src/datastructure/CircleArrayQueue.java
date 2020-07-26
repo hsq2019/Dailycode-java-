@@ -3,6 +3,7 @@ package datastructure;
 import java.util.Scanner;
 
 public class CircleArrayQueue {
+
     public static void main(String[] args) {
         System.out.println("环形队列");
         CircleArray arrayQueue=new CircleArray(4);
@@ -66,6 +67,7 @@ class CircleArray{
         front = 0;
         rear = 0;
     }
+
     //判断是否满
     public boolean isFull(){
         return (rear+maxSize-front)%maxSize==front;
