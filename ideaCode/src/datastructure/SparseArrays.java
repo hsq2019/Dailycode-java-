@@ -1,5 +1,6 @@
 package datastructure;
 
+
 public class SparseArrays {
     public static void main(String[] args) {
         int[][] arr=new int[5][5];
@@ -58,7 +59,5 @@ public class SparseArrays {
             }
             System.out.println();
         }
-
-
     }
 }
