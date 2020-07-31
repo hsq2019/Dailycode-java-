@@ -11,8 +11,6 @@ public class Stu {
         frame1.setLocation(200,100);
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame1.setVisible(true);
-
-
     }
 }
 
