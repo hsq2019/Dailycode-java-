@@ -1,6 +1,6 @@
 package java_learn;
 
-
+//继承
 class X{
     Y y=new Y();
     public X(){

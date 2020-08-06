@@ -1,9 +1,5 @@
 package java_learn;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
-import java.sql.SQLOutput;
-import java.util.Random;
-import java.util.*;
 public class Test {
     public static void main(String[] args) {
         // Scanner scanner=new Scanner(System.in);
