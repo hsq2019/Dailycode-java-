@@ -20,8 +20,11 @@ public class Sort {
 //        System.out.println("快排");
 //        QuickSort(arr,0,arr.length-1);
 //        System.out.println(Arrays.toString(arr));
-        System.out.println("堆排");
-        heap(arr);
+//        System.out.println("堆排");
+//        heap(arr);
+        System.out.println("归并");
+        mergeSort(arr,0,arr.length);
+        System.out.println(Arrays.toString(arr));
 
     }
     //冒泡
@@ -173,5 +176,49 @@ public class Sort {
 
 
     //归并
+    private static void mergeSort(int[] arr,int low,int high){
+        //先分解
+        if(high-low<=1){
+            //说明数组里面只有一个或者0个元素
+            return;
+        }
+        int mid=(high+low)/2;
+        //分
+        mergeSort(arr,low,mid);
+        mergeSort(arr,mid,high);
+        //和
+        merge(arr,low,high,mid);
+
+    }
+    private static void merge(int[] arr,int low,int high,int mid){
+        int[] output=new int[high-low];
+        int outputIndex=0;//数组的长度
+        int size=mid;
+        int num=low;
+        while (num<size&&size<high){
+            if(arr[num]>arr[size]){
+                output[outputIndex]=arr[size];
+                outputIndex++;
+                size++;
+            }else {
+                output[outputIndex]=arr[num];
+                outputIndex++;
+                num++;
+            }
+        }
+        while (num<mid){
+            output[outputIndex]=arr[num];
+            num++;
+            outputIndex++;
+        }
+        while (size<high){
+            output[outputIndex]=arr[size];
+            size++;
+            outputIndex++;
+        }
+        for(int i=0;i<high-low;i++){
+            arr[low+i]=output[i];
+        }
+    }
 
 }
